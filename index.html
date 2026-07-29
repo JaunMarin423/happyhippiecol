@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy Como Hippie · Psicología consciente y sin juicios</title>
+  <meta name="description" content="Terapia psicológica online y presencial con enfoque humano. Un espacio seguro, cálido y libre de juicios para volver a ti. Agenda por WhatsApp." />
+  <meta name="keywords" content="psicología, terapia online, salud mental, ansiedad, autoestima, happy como hippie, bienestar emocional" />
+  <meta name="author" content="Happy Como Hippie" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Happy Como Hippie · Un espacio seguro para volver a ti" />
+  <meta property="og:description" content="Psicología desde un enfoque humano, libre y consciente. Sin juicios, a tu propio ritmo." />
+  <meta property="og:url" content="https://happycomohippie.com" />
+  <meta property="og:locale" content="es_MX" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              fuchsia: '#E0215A',
+              fuchsiaDark: '#B81A48',
+              fuchsiaLight: '#FCE4EC',
+              mustard: '#FFB833',
+              mustardDark: '#E8A020',
+              mustardLight: '#FFF3D6',
+              cream: '#FFFDF9',
+              sand: '#F8F4EE',
+              dark: '#1A1A2E',
+            },
+          },
+          borderRadius: {
+            blob: '45% 55% 65% 35% / 50% 40% 60% 50%',
+            pill: '9999px',
+          },
+          animation: {
+            float: 'float 7s ease-in-out infinite',
+            'float-delayed': 'float 7s ease-in-out 2s infinite',
+            'fade-in': 'fadeIn 0.9s ease-out forwards',
+            'slide-up': 'slideUp 0.7s ease-out forwards',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-18px) rotate(2deg)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(60px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #FFFDF9;
+      color: #1A1A2E;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', system-ui, sans-serif;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    ::selection {
+      background: #E0215A;
+      color: #fff;
+    }
+
+    .shadow-organic {
+      box-shadow: 0 10px 40px rgba(224, 33, 90, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    .shadow-organic-lg {
+      box-shadow: 0 20px 60px rgba(224, 33, 90, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .shadow-organic-heavy {
+      box-shadow: 0 25px 80px rgba(224, 33, 90, 0.15);
+    }
+
+    .glass-nav {
+      background: rgba(255, 253, 249, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .btn-fuchsia {
+      background: linear-gradient(135deg, #E0215A, #B81A48);
+      color: #fff;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 6px 24px rgba(224, 33, 90, 0.30);
+    }
+    .btn-fuchsia:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(224, 33, 90, 0.40);
+    }
+
+    .btn-mustard {
+      background: linear-gradient(135deg, #FFB833, #E8A020);
+      color: #1A1A2E;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 6px 24px rgba(255, 184, 51, 0.35);
+    }
+    .btn-mustard:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(255, 184, 51, 0.45);
+    }
+
+    .btn-outline-fuchsia {
+      border: 2.5px solid #E0215A;
+      color: #E0215A;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .btn-outline-fuchsia:hover {
+      background: #E0215A;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .card-service {
+      background: #fff;
+      border-radius: 28px;
+      padding: 2rem;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 8px 32px rgba(224, 33, 90, 0.06);
+      border: 1.5px solid rgba(224, 33, 90, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .card-service::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #FFB833, #E0215A);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .card-service:hover::before { opacity: 1; }
+    .card-service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(224, 33, 90, 0.12);
+      border-color: rgba(224, 33, 90, 0.15);
+    }
+
+    .card-testimonial {
+      background: #fff;
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(224, 33, 90, 0.06);
+      position: relative;
+    }
+    .card-testimonial::before {
+      content: '"';
+      font-family: 'Poppins', sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1;
+      color: #FFB833;
+      opacity: 0.25;
+      position: absolute;
+      top: 0.25rem;
+      left: 1.25rem;
+    }
+
+    .blob-bg {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.20;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .benefit-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #FFF3D6, #FFB833);
+      color: #E0215A;
+    }
+
+    .organic-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #FFB833, #E0215A, #FFB833, transparent);
+    }
+
+    .nav-link-f {
+      position: relative;
+      font-weight: 500;
+    }
+    .nav-link-f::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background: #E0215A;
+      border-radius: 99px;
+      transition: width 0.3s ease;
+    }
+    .nav-link-f:hover::after { width: 100%; }
+
+    .stat-box {
+      background: rgba(255, 184, 51, 0.15);
+      border-radius: 20px;
+      padding: 1.25rem 0.75rem;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #FFFDF9; }
+    ::-webkit-scrollbar-thumb { background: #FFB833; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: #E8A020; }
+
+    @media (max-width: 768px) {
+      .stat-box { padding: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!--  NAVBAR                                                      -->
+  <!-- ============================================================ -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-[rgba(224,33,90,0.06)]">
+    <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between" aria-label="Navegación principal">
+
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3" aria-label="Happy Como Hippie - Inicio">
+        <span class="text-2xl sm:text-3xl" aria-hidden="true">&#x1F33F;</span>
+        <div>
+          <span class="font-display text-base sm:text-lg font-extrabold text-[#E0215A] leading-tight">
+            Happy Como Hippie
+          </span>
+          <span class="hidden sm:block text-[10px] font-medium text-[#1A1A2E]/50 -mt-0.5 tracking-wide uppercase">Psicología consciente</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#sobre-mi" class="nav-link-f text-sm text-[#1A1A2E]/70 hover:text-[#E0215A] transition-colors">Sobre mí</a>
+        <a href="#servicios" class="nav-link-f text-sm text-[#1A1A2E]/70 hover:text-[#E0215A] transition-colors">Servicios</a>
+        <a href="#beneficios" class="nav-link-f text-sm text-[#1A1A2E]/70 hover:text-[#E0215A] transition-colors">Beneficios</a>
+        <a href="#testimonios" class="nav-link-f text-sm text-[#1A1A2E]/70 hover:text-[#E0215A] transition-colors">Testimonios</a>
+        <a href="#contacto" class="btn-fuchsia inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Agendar cita
+        </a>
+      </div>
+
+      <button id="menu-toggle" class="md:hidden p-2 rounded-xl hover:bg-[#FFF3D6] transition-colors" aria-label="Abrir menú">
+        <svg class="w-6 h-6 text-[#1A1A2E]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden glass-nav border-t border-[rgba(224,33,90,0.06)] px-5 py-5 space-y-3">
+      <a href="#sobre-mi" class="block py-2.5 text-sm font-medium text-[#1A1A2E]/70 hover:text-[#E0215A]" onclick="closeMenu()">Sobre mí</a>
+      <a href="#servicios" class="block py-2.5 text-sm font-medium text-[#1A1A2E]/70 hover:text-[#E0215A]" onclick="closeMenu()">Servicios</a>
+      <a href="#beneficios" class="block py-2.5 text-sm font-medium text-[#1A1A2E]/70 hover:text-[#E0215A]" onclick="closeMenu()">Beneficios</a>
+      <a href="#testimonios" class="block py-2.5 text-sm font-medium text-[#1A1A2E]/70 hover:text-[#E0215A]" onclick="closeMenu()">Testimonios</a>
+      <a href="#contacto" class="btn-fuchsia inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-full text-sm font-semibold mt-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        Agendar cita
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!--  HERO                                                        -->
+  <!-- ============================================================ -->
+  <section id="hero" class="relative min-h-screen flex items-center pt-20 sm:pt-24 overflow-hidden bg-[#FFFDF9]">
+
+    <div class="blob-bg w-[600px] h-[600px] bg-[#FFB833] top-[-200px] right-[-150px]"></div>
+    <div class="blob-bg w-[450px] h-[450px] bg-[#E0215A] bottom-[-120px] left-[-100px] opacity-10"></div>
+    <div class="blob-bg w-[300px] h-[300px] bg-[#FFB833] top-[30%] left-[5%]"></div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <div class="space-y-7 text-center md:text-left">
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start reveal">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#FFB833] to-[#E8A020] flex items-center justify-center shadow-organic flex-shrink-0 border-4 border-white">
+              <span class="text-3xl sm:text-4xl">&#x1F33F;</span>
+            </div>
+            <div class="text-center sm:text-left">
+              <span class="inline-block px-4 py-1 rounded-full bg-[#FFF3D6] text-[#E0215A] text-[11px] font-bold tracking-wider uppercase">
+                Happy Como Hippie
+              </span>
+              <p class="text-xs text-[#1A1A2E]/40 mt-1 font-medium">Psicología consciente y sin juicios</p>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <h1 class="text-[#E0215A] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold leading-[1.1]">
+              Un espacio seguro
+              <span class="block text-[#1A1A2E]">para volver a ti,</span>
+              <span class="block text-[#1A1A2E]">sin juicios y a tu</span>
+              <span class="block text-[#FFB833]">propio ritmo.</span>
+            </h1>
+            <p class="text-base sm:text-lg text-[#1A1A2E]/60 leading-relaxed max-w-lg mx-auto md:mx-0 mt-5">
+              La salud mental vista desde un enfoque humano, libre y consciente. Bienvenido a <strong class="text-[#E0215A] font-semibold">Happy Como Hippie</strong>, donde sanar también es un acto de libertad.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3.5 justify-center md:justify-start reveal">
+            <a href="https://wa.me/521XXXXXXXXXX?text=Quiero%20agendar%20mi%20cita%20en%20Happy%20Como%20Hippie"
+               target="_blank" rel="noopener"
+               class="btn-fuchsia inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-bold tracking-wide">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Agendar mi cita por WhatsApp
+            </a>
+            <a href="#sobre-mi" class="btn-outline-fuchsia inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm font-bold">
+              Conocer más
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-5 justify-center md:justify-start pt-2 text-xs text-[#1A1A2E]/50 reveal">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#FFB833]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Sesiones online y presenciales
+            </span>
+            <span class="w-px h-4 bg-[#1A1A2E]/10"></span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#FFB833]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+              Confidencialidad total
+            </span>
+            <span class="w-px h-4 bg-[#1A1A2E]/10"></span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#FFB833]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+              Atención empática
+            </span>
+          </div>
+        </div>
+
+        <div class="hidden md:flex justify-center reveal">
+          <div class="relative w-full max-w-[480px]">
+            <div class="relative blob-frame w-full aspect-square shadow-organic-lg"
+                 style="border-radius: 38% 62% 58% 42% / 42% 46% 54% 58%; overflow: hidden;">
+              <div class="w-full h-full bg-gradient-to-br from-[#FFF3D6] to-[#FFB833] flex items-center justify-center">
+                <div class="text-center p-6">
+                  <span class="text-7xl block mb-4">&#x1F9D8;&#x200D;&#x2640;&#xFE0F;</span>
+                  <p class="text-sm text-[#E0215A] font-bold">Foto de la psicóloga</p>
+                  <p class="text-xs text-[#1A1A2E]/40 mt-1">Reemplazar con imagen profesional</p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -bottom-5 -right-5 w-28 h-28">
+              <svg viewBox="0 0 100 100" fill="#FFB833" opacity="0.3">
+                <circle cx="10" cy="10" r="5"/><circle cx="30" cy="10" r="5"/>
+                <circle cx="50" cy="10" r="5"/><circle cx="70" cy="10" r="5"/>
+                <circle cx="10" cy="30" r="5"/><circle cx="30" cy="30" r="5"/>
+                <circle cx="50" cy="30" r="5"/><circle cx="70" cy="30" r="5"/>
+                <circle cx="10" cy="50" r="5"/><circle cx="30" cy="50" r="5"/>
+                <circle cx="50" cy="50" r="5"/><circle cx="70" cy="50" r="5"/>
+              </svg>
+            </div>
+            <div class="absolute -top-4 -left-4 w-16 h-16 bg-[#E0215A]/10 rounded-full"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!--  SECCIÓN 2: SOBRE MÍ                                         -->
+  <!-- ============================================================ -->
+  <section id="sobre-mi" class="py-20 sm:py-28 bg-[#FFB833] relative overflow-hidden">
+    <div class="blob-bg w-[500px] h-[500px] bg-white/15 top-[-100px] right-[-100px]"></div>
+    <div class="blob-bg w-[350px] h-[350px] bg-[#E0215A]/10 bottom-[-80px] left-[-80px]"></div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <div class="order-2 md:order-1 reveal">
+          <div class="relative w-full max-w-[400px] mx-auto aspect-square"
+               style="border-radius: 55% 45% 35% 65% / 50% 55% 45% 50%; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.12);">
+            <div class="w-full h-full bg-gradient-to-br from-[#FFF3D6] to-white flex items-center justify-center">
+              <div class="text-center p-6">
+                <span class="text-5xl block mb-2">&#x1F33A;</span>
+                <p class="text-sm text-[#E0215A] font-bold">Espacio terapéutico</p>
+                <p class="text-xs text-[#1A1A2E]/40 mt-1">Foto del consultorio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 space-y-6 reveal">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 text-[#E0215A] text-xs font-bold tracking-wider uppercase shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#E0215A]"></span>
+            Conoce el espacio
+          </span>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-[#1A1A2E]">
+            Psicología con
+            <span class="text-white">alma hippie</span>
+            <span class="block text-2xl sm:text-3xl font-bold text-[#1A1A2E]/70 mt-2">y compromiso profesional</span>
+          </h2>
+
+          <div class="space-y-4 text-[#1A1A2E]/70 leading-relaxed">
+            <p>
+              Soy <strong class="text-[#1A1A2E] font-semibold">[Nombre de la Psicóloga]</strong>, psicóloga clínica con enfoque humanista. Creé <strong class="text-[#E0215A] font-semibold">Happy Como Hippie</strong> porque creo que la salud mental no debería sentirse como un trámite frío ni un espacio intimidante.
+            </p>
+            <p>
+              El nombre nace de una invitación: <em class="text-[#E0215A] font-medium">atreverte a ser libre</em>. Soltar lo que pesa, reconectar con tu esencia desde la conciencia y la calma. Ser "hippie" aquí es ser auténtico, librarse de juicios, ser tú sin máscaras.
+            </p>
+            <p>
+              Te ofrezco un espacio donde puedes llegar tal cual estás —con tus emociones revueltas, tus dudas, tu ruido mental— y desde ahí construir, juntos, un camino hacia el bienestar.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="stat-box">
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-[#E0215A]">+5</div>
+              <p class="text-[10px] sm:text-xs font-medium text-[#1A1A2E]/60">años de experiencia</p>
+            </div>
+            <div class="stat-box">
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-[#E0215A]">+200</div>
+              <p class="text-[10px] sm:text-xs font-medium text-[#1A1A2E]/60">sesiones realizadas</p>
+            </div>
+            <div class="stat-box">
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-[#E0215A]">100%</div>
+              <p class="text-[10px] sm:text-xs font-medium text-[#1A1A2E]/60">enfoque humano</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!--  SECCIÓN 3: SERVICIOS                                        -->
+  <!-- ============================================================ -->
+  <section id="servicios" class="py-20 sm:py-28 bg-[#FFFDF9]">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-[#FFF3D6] text-[#E0215A] text-xs font-bold tracking-wider uppercase">
+          &#x1F33F; ¿Cómo te puedo acompañar?
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-[#1A1A2E] mt-4">
+          Servicios de psicología
+          <span class="block text-[#E0215A] text-2xl sm:text-3xl mt-2">con calidez y libertad</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div class="card-service reveal">
+          <div class="benefit-icon-wrap mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-[#1A1A2E] mb-3">Psicoterapia Individual para Adultos</h3>
+          <p class="text-sm text-[#1A1A2E]/60 leading-relaxed mb-5">
+            Un espacio personalizado donde explorar tus emociones, pensamientos y patrones desde la escucha activa y el respeto profundo por tu proceso único.
+          </p>
+          <a href="#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-[#E0215A] hover:text-[#B81A48] transition-colors">
+            Saber más
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+
+        <div class="card-service reveal">
+          <div class="benefit-icon-wrap mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-[#1A1A2E] mb-3">Gestión de Ansiedad y Regulación Emocional</h3>
+          <p class="text-sm text-[#1A1A2E]/60 leading-relaxed mb-5">
+            Herramientas reales para aprender a gestionar la ansiedad, el estrés crónico y encontrar calma en medio del caos diario desde la conciencia.
+          </p>
+          <a href="#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-[#E0215A] hover:text-[#B81A48] transition-colors">
+            Saber más
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+
+        <div class="card-service reveal">
+          <div class="benefit-icon-wrap mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-[#1A1A2E] mb-3">Autoconocimiento y Autoestima</h3>
+          <p class="text-sm text-[#1A1A2E]/60 leading-relaxed mb-5">
+            Un viaje de reconexión contigo mismo para fortalecer tu autoestima, soltar creencias limitantes y descubrir quién eres realmente.
+          </p>
+          <a href="#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-[#E0215A] hover:text-[#B81A48] transition-colors">
+            Saber más
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center reveal">
+        <p class="text-sm text-[#1A1A2E]/50">
+          &#x1F9D8; También acompaño procesos de duelo, separaciones y bienestar emocional general.
+        </p>
+        <a href="#contacto" class="btn-fuchsia inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold mt-4">
+          Consultar todos los servicios
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!--  SECCIÓN 4: BENEFICIOS                                       -->
+  <!-- ============================================================ -->
+  <section id="beneficios" class="py-20 sm:py-28 bg-[#FFB833] relative overflow-hidden">
+    <div class="blob-bg w-[400px] h-[400px] bg-white/15 top-[-120px] left-[-80px]"></div>
+    <div class="blob-bg w-[350px] h-[350px] bg-[#E0215A]/10 bottom-[-100px] right-[-60px]"></div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-white/80 text-[#E0215A] text-xs font-bold tracking-wider uppercase shadow-sm">
+          &#x2728; ¿Por qué empezar tu proceso?
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-[#1A1A2E] mt-4">
+          Beneficios de dar el paso
+          <span class="block text-white text-2xl sm:text-3xl mt-2">hacia tu bienestar emocional</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div class="flex gap-4 p-5 rounded-2xl bg-white/80 hover:bg-white transition-all reveal">
+          <div class="benefit-icon-wrap flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[#1A1A2E] mb-1">Aprende a entender tus emociones</h3>
+            <p class="text-sm text-[#1A1A2E]/60">Deja de luchar contra lo que sientes. Te acompañaré a darle un lugar a cada emoción sin culpa ni miedo.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5 rounded-2xl bg-white/80 hover:bg-white transition-all reveal">
+          <div class="benefit-icon-wrap flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[#1A1A2E] mb-1">Suelta la autoexigencia y los patrones</h3>
+            <p class="text-sm text-[#1A1A2E]/60">Identifica creencias limitantes y comportamientos repetitivos que te mantienen estancado para construir nuevos caminos.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5 rounded-2xl bg-white/80 hover:bg-white transition-all reveal">
+          <div class="benefit-icon-wrap flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[#1A1A2E] mb-1">Construye herramientas reales para tu día a día</h3>
+            <p class="text-sm text-[#1A1A2E]/60">No solo hablamos: te llevas recursos prácticos y concretos para aplicar en tu vida cotidiana desde la primera sesión.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5 rounded-2xl bg-white/80 hover:bg-white transition-all reveal">
+          <div class="benefit-icon-wrap flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[#1A1A2E] mb-1">Siéntete escuchado sin miedo al juicio</h3>
+            <p class="text-sm text-[#1A1A2E]/60">Un espacio seguro donde puedes ser completamente tú, desde la confidencialidad, la calidez y el respeto profundo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!--  SECCIÓN 5: TESTIMONIOS                                      -->
+  <!-- ============================================================ -->
+  <section id="testimonios" class="py-20 sm:py-28 bg-[#FFFDF9]">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-[#FFF3D6] text-[#E0215A] text-xs font-bold tracking-wider uppercase">
+          &#x1F49B; Historias reales
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-[#1A1A2E] mt-4">
+          Lo que dicen quienes han vivido
+          <span class="block text-[#E0215A] text-2xl sm:text-3xl mt-2">esta experiencia transformadora</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div class="card-testimonial reveal">
+          <p class="text-sm text-[#1A1A2E]/70 leading-relaxed mb-5 relative z-10">
+            "Ir a terapia aquí cambió mi forma de lidiar con el día a día. Por primera vez sentí que podía ser yo sin miedo a ser juzgada. Gracias por crear este espacio tan bonito y seguro."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#FFB833] to-[#E8A020] flex items-center justify-center text-white text-sm font-bold">A</div>
+            <div>
+              <p class="text-sm font-bold text-[#1A1A2E]">Ana M.</p>
+              <div class="flex items-center gap-0.5">
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-testimonial reveal">
+          <p class="text-sm text-[#1A1A2E]/70 leading-relaxed mb-5 relative z-10">
+            "Llegué con mucha ansiedad y miedo. Poco a poco fui encontrando herramientas para entenderme mejor y soltar lo que me pesaba. Es un proceso bonito, acompañado y real."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#E0215A] to-[#B81A48] flex items-center justify-center text-white text-sm font-bold">C</div>
+            <div>
+              <p class="text-sm font-bold text-[#1A1A2E]">Carlos R.</p>
+              <div class="flex items-center gap-0.5">
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-testimonial reveal">
+          <p class="text-sm text-[#1A1A2E]/70 leading-relaxed mb-5 relative z-10">
+            "Happy Como Hippie no es solo un consultorio, es un abrazo al alma. Cada sesión me regala claridad y paz. Recomiendo este espacio con todo mi corazón."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#FFB833] to-[#E0215A] flex items-center justify-center text-white text-sm font-bold">M</div>
+            <div>
+              <p class="text-sm font-bold text-[#1A1A2E]">Martina G.</p>
+              <div class="flex items-center gap-0.5">
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3.5 h-3.5 text-[#FFB833]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!--  CTA INTERMEDIO                                              -->
+  <!-- ============================================================ -->
+  <section class="py-16 sm:py-20 bg-gradient-to-r from-[#E0215A] to-[#B81A48] relative overflow-hidden">
+    <div class="blob-bg w-[500px] h-[500px] bg-[#FFB833]/20 top-[-150px] right-[-100px]"></div>
+    <div class="blob-bg w-[400px] h-[400px] bg-[#FFB833]/15 bottom-[-120px] left-[-80px]"></div>
+
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative z-10 reveal">
+      <span class="text-5xl block mb-4">&#x1F9E1;</span>
+      <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white mb-4">
+        ¿Listo para comenzar tu proceso?
+      </h2>
+      <p class="text-white/80 text-base sm:text-lg max-w-lg mx-auto mb-8">
+        No necesitas tener todo claro para llegar. Solo necesitas las ganas de sentirte mejor. Estoy aquí para acompañarte.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/521XXXXXXXXXX?text=Quiero%20agendar%20mi%20cita%20en%20Happy%20Como%20Hippie"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 bg-[#FFB833] text-[#1A1A2E] px-8 py-4 rounded-full text-sm font-bold hover:bg-[#E8A020] transition-all shadow-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar mi cita por WhatsApp
+        </a>
+        <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-white/10 text-white border-2 border-white/30 px-8 py-4 rounded-full text-sm font-bold hover:bg-white/20 transition-all">
+          Ver medios de contacto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!--  FOOTER / CONTACTO                                           -->
+  <!-- ============================================================ -->
+  <footer id="contacto" class="bg-[#1A1A2E] text-white/70 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFB833] to-[#E8A020] flex items-center justify-center flex-shrink-0">
+              <span class="text-xl">&#x1F33F;</span>
+            </div>
+            <div>
+              <span class="font-display text-base font-extrabold text-white">Happy Como Hippie</span>
+              <span class="block text-[11px] text-white/40 font-medium">Psicología consciente</span>
+            </div>
+          </div>
+          <p class="text-sm leading-relaxed text-white/50 mb-6">
+            Psicología cálida, consciente y libre de juicios. Un espacio seguro para volver a ti.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/happyhippiecol/" target="_blank" rel="noopener"
+               class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FFB833] hover:text-[#1A1A2E] transition-all"
+               aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.11 2.525c.636-.247 1.363-.416 2.427-.465C8.88 2.013 9.235 2 11.665 2h.63zm-.082 1.813h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+            </a>
+            <a href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener"
+               class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FFB833] hover:text-[#1A1A2E] transition-all"
+               aria-label="WhatsApp">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://linktr.ee/happyhippiecol" target="_blank" rel="noopener"
+               class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FFB833] hover:text-[#1A1A2E] transition-all"
+               aria-label="Linktree">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M13.736 3L12 5.5l1.736 2.5H24L13.736 3zM10.264 3L0 8l10.264 2.5L12 8l-1.736-2.5zM12 10l-1.736 2.5L12 15l1.736-2.5L12 10zM2.5 13.5l8.5 3.5v4l-8.5-5v-2.5zm19 0v2.5l-8.5 5v-4l8.5-3.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-display text-sm font-extrabold text-white mb-5">&#x1F4E9; Contacto directo</h4>
+          <ul class="space-y-3.5 text-sm">
+            <li>
+              <a href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener"
+                 class="flex items-center gap-3 text-white/50 hover:text-[#FFB833] transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0 text-[#FFB833]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                +52 1 XX XXXX XXXX
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hola@happycomohippie.com"
+                 class="flex items-center gap-3 text-white/50 hover:text-[#FFB833] transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0 text-[#E0215A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                hola@happycomohippie.com
+              </a>
+            </li>
+            <li class="flex items-start gap-3 text-white/50">
+              <svg class="w-4 h-4 flex-shrink-0 text-[#FFB833] mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              <span>Ciudad de México / Online</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-sm font-extrabold text-white mb-5">&#x1F310; Accesos directos</h4>
+          <ul class="space-y-3.5 text-sm">
+            <li>
+              <a href="https://www.instagram.com/happyhippiecol/" target="_blank" rel="noopener"
+                 class="flex items-center gap-3 text-white/50 hover:text-[#E0215A] transition-colors">
+                <svg class="w-4 h-4 text-[#E0215A]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.11 2.525c.636-.247 1.363-.416 2.427-.465C8.88 2.013 9.235 2 11.665 2h.63zm-.082 1.813h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+                Instagram @happyhippiecol
+              </a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/happyhippiecol" target="_blank" rel="noopener"
+                 class="flex items-center gap-3 text-white/50 hover:text-[#E0215A] transition-colors">
+                <svg class="w-4 h-4 text-[#FFB833]" viewBox="0 0 24 24" fill="currentColor"><path d="M13.736 3L12 5.5l1.736 2.5H24L13.736 3zM10.264 3L0 8l10.264 2.5L12 8l-1.736-2.5zM12 10l-1.736 2.5L12 15l1.736-2.5L12 10zM2.5 13.5l8.5 3.5v4l-8.5-5v-2.5zm19 0v2.5l-8.5 5v-4l8.5-3.5z"/></svg>
+                Linktree (todos los enlaces)
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center gap-3 text-white/50 hover:text-[#E0215A] transition-colors">
+                <svg class="w-4 h-4 text-[#FFB833]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                Blog / Recursos gratuitos
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-sm font-extrabold text-white mb-5">&#x1F4AC; Modalidad de sesiones</h4>
+          <ul class="space-y-3.5 text-sm text-white/50">
+            <li class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-base">&#x1F4F1;</span>
+              <div>
+                <span class="block text-white font-semibold">Online</span>
+                <span class="text-xs">Desde la comodidad de tu hogar</span>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-base">&#x1F3E1;</span>
+              <div>
+                <span class="block text-white font-semibold">Presencial</span>
+                <span class="text-xs">CDMX (previa cita)</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="mt-6 pt-6 border-t border-white/10">
+            <a href="https://wa.me/521XXXXXXXXXX?text=Quiero%20agendar%20mi%20cita%20en%20Happy%20Como%20Hippie"
+               target="_blank" rel="noopener"
+               class="btn-fuchsia inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-full text-sm font-bold">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Agendar cita ahora
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
+        <p>&copy; 2026 Happy Como Hippie &middot; Psicología con alma hippie y compromiso profesional.</p>
+        <p>Hecho con &#x1F9E1; para tu bienestar emocional</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/521XXXXXXXXXX?text=Quiero%20agendar%20mi%20cita%20en%20Happy%20Como%20Hippie"
+     target="_blank" rel="noopener"
+     class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-[#FFB833] to-[#E8A020] text-[#1A1A2E] flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110"
+     aria-label="Contactar por WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    function closeMenu() { mobileMenu.classList.add('hidden'); }
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shadow-organic', window.scrollY > 60);
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Happy Como Hippie",
+    "description": "Consultorio de psicología clínica con enfoque humano, cálido y libre de juicios. Sesiones online y presenciales en CDMX.",
+    "url": "https://happycomohippie.com",
+    "telephone": "+52 1 XX XXXX XXXX",
+    "email": "hola@happycomohippie.com",
+    "sameAs": ["https://www.instagram.com/happyhippiecol/", "https://linktr.ee/happyhippiecol"],
+    "areaServed": ["MX", "CDMX"],
+    "priceRange": "$",
+    "medicalSpecialty": "Psychotherapy",
+    "founder": { "@type": "Person", "name": "[Nombre de la Psicóloga]" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de México",
+      "addressCountry": "MX"
+    }
+  }
+  </script>
+</body>
+</html>
