@@ -4,8 +4,8 @@
 
 (function () {
 
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  var menuToggle = document.getElementById('menu-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
 
   window.closeMenu = function () {
     mobileMenu.classList.add('hidden');
@@ -19,7 +19,9 @@
     link.addEventListener('click', window.closeMenu);
   });
 
-  const observer = new IntersectionObserver(function (entries) {
+  /* ---- Scroll Reveal ---- */
+
+  var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
@@ -30,6 +32,8 @@
   document.querySelectorAll('.reveal').forEach(function (el) {
     observer.observe(el);
   });
+
+  /* ---- Smooth scroll for anchor links ---- */
 
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -43,12 +47,68 @@
     });
   });
 
+  /* ---- Navbar shadow on scroll ---- */
+
   var header = document.querySelector('header');
   window.addEventListener('scroll', function () {
     if (window.scrollY > 60) {
       header.classList.add('shadow-organic');
     } else {
       header.classList.remove('shadow-organic');
+    }
+  });
+
+  /* ---- Sticky mobile bar ---- */
+
+  var stickyBar = document.getElementById('sticky-bar');
+  if (stickyBar) {
+    setTimeout(function () {
+      stickyBar.classList.add('visible');
+    }, 1500);
+  }
+
+  /* ---- Exit-intent popup ---- */
+
+  var exitPopup = document.getElementById('exit-popup');
+  var exitClose = document.getElementById('exit-popup-close');
+  var popupShown = false;
+
+  function showPopup() {
+    if (!popupShown && exitPopup) {
+      exitPopup.classList.add('active');
+      popupShown = true;
+    }
+  }
+
+  function hidePopup() {
+    if (exitPopup) {
+      exitPopup.classList.remove('active');
+    }
+  }
+
+  if (exitClose) {
+    exitClose.addEventListener('click', hidePopup);
+  }
+
+  if (exitPopup) {
+    exitPopup.addEventListener('click', function (e) {
+      if (e.target === exitPopup) {
+        hidePopup();
+      }
+    });
+  }
+
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY <= 0 && !popupShown) {
+      showPopup();
+    }
+  });
+
+  /* ---- Escape key closes popup ---- */
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      hidePopup();
     }
   });
 

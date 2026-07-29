@@ -1,0 +1,23 @@
+{
+  "name": "happy",
+  "version": "1.0.0",
+  "description": "Landing page profesional para **Happy Como Hippie**, un consultorio de psicología clínica con enfoque humano, cálido y libre de juicios. Diseñada para convertir visitantes en pacientes, transmitiendo la esencia bohemio-moderna y empática de la marca.",
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o styles.css --minify",
+    "dev:css": "tailwindcss -i src/input.css -o styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaunMarin423/happyhippiecol.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaunMarin423/happyhippiecol/issues"
+  },
+  "homepage": "https://github.com/JaunMarin423/happyhippiecol#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
