@@ -18,7 +18,9 @@ Landing page profesional para **Happy Como Hippie**, un consultorio de psicolog�
 
 ```
 happy/
-├── index.html          # Landing page completa (Single Page)
+├── index.html          # Estructura HTML (contenido y SEO)
+├── styles.css          # Estilos personalizados (Tailwind + CSS propio)
+├── script.js           # JavaScript (nav, scroll reveal, smooth scroll)
 └── README.md           # Esta documentación
 ```
 
@@ -55,6 +57,7 @@ happy/
 - **Tailwind CSS v3** (vía CDN) con configuración de colores y animaciones personalizadas
 - **Google Fonts**: Poppins + Inter
 - **CSS moderno**: Glassmorphism, clip-paths orgánicos, Intersection Observer para scroll reveal
+- **Archivos separados**: `index.html` / `styles.css` / `script.js` (buenas prácticas, mantenibilidad)
 - **Sin dependencias** — funciona directo desde el navegador
 
 ## 📈 SEO
